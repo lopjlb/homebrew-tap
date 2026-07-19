@@ -11,11 +11,11 @@
 class Lopjlb < Formula
   desc "LOPJLB quantitative equity research CLI (REST over www.lopjlb.com/bff/api)"
   homepage "https://www.lopjlb.com/developers"
-  url "https://files.pythonhosted.org/packages/d4/16/c6fbb0d84bb2dcde49f6ef805a5997382cf5623ff463d4b5766dce73f374/lopjlb-0.1.1.tar.gz"
+  url "https://files.pythonhosted.org/packages/d8/d9/4e78e9d756e9edce813b2432f79ba44bea6d6426c208b96d63bcb310a59b/lopjlb-0.1.4.tar.gz"
   # sha256 filled by release workflow after PyPI publish; placeholder fails brew until then
-  sha256 "c69514be471c88221cba08fd81143af733c89832e733d511da0db86eefb66d4b"
+  sha256 "12171f26a5e16013923dbfab6d02fbb53c02c350da56332227002d774daa9cbe"
   license "LicenseRef-LOPJLB-Proprietary"
-  version "0.1.1"
+  version "0.1.4"
 
   depends_on "python@3.12"
 
