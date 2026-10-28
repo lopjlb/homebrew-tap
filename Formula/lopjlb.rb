@@ -11,11 +11,10 @@
 class Lopjlb < Formula
   desc "LOPJLB quantitative equity research CLI (REST over www.lopjlb.com/bff/api)"
   homepage "https://www.lopjlb.com/developers"
-  url "https://files.pythonhosted.org/packages/0a/b3/f4ad624a9665d6edaf11fe44c403191c72069b5a86ba345bec3e764e7e72/lopjlb-0.1.7.tar.gz"
-  # sha256 filled by release workflow after PyPI publish; placeholder fails brew until then
-  sha256 "24f87e1c757a25fa019874c7ac1aa67a978fddd2a4d369d033feacbc809ee797"
+  url "https://files.pythonhosted.org/packages/9a/6d/4eda6020be33efb59c814f12bc598657d87bfa84b96c36b4d74aa04b1073/lopjlb-0.1.8.tar.gz"
+  sha256 "685b8ab97b593ff77435b10a18d3085b6d1a9d43d7d5e278a5313ce85cac1e40"
   license "LicenseRef-LOPJLB-Proprietary"
-  version "0.1.7"
+  version "0.1.8"
 
   depends_on "python@3.12"
 
@@ -36,12 +35,12 @@ class Lopjlb < Formula
 
   def caveats
     <<~EOS
-      lopjlb is a REST client. MCP is a separate Enterprise host surface:
-        POST https://www.lopjlb.com/bff/api/mcp
+      lopjlb is a REST client. MCP is a separate host surface, on every plan:
+        https://www.lopjlb.com/mcp (sign in with your LOPJLB account)
       Free research needs no API key: lopjlb ticker AAPL
       Agent skill: npx skills add lopjlb/lopjlb-skill
       Agent claim (AuthKit): https://www.lopjlb.com/auth.md · lopjlb auth claim
-      Enterprise REST: export LOPJLB_API_KEY=… && lopjlb export signals
+      Enterprise REST: export LOPJLB_API_KEY=… && lopjlb export signals --out signals.csv
     EOS
   end
 end
